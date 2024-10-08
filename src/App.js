@@ -13,7 +13,7 @@ function App() {
   const handleSubmit = async () => {
     try {
       setLoading(true)
-      const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=8ed0f84b16d1451fb5c32057240810&q=${city}`)
+      const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=8ed0f84b16d1451fb5c32057240810&q=${city}`)
       if (!res.ok) throw new Error("Invalid data")
       console.log(res)
       const data = await res.json()
